@@ -13,26 +13,29 @@
         <h1 class="text-3xl tracking-tighter mt-10 mb-3">All Users</h1>
 
         <div class="users flex gap-3 flex-wrap ">
-            <!-- images -->
-            <div class="user w-72 bg-zinc-800 p-5 rounded-lg ">
-                <div class="w-full h-52 rounded-lg bg-zinc-500"></div>
-                <h3 class="text-xl tracking-tighter mt-3 ">Hars Vandana Sharma</h3>
-                <h5 class="text-zinc-500">harsh@gmail.com</h5>
-                <div class="flex gap-3 mt-10">
-                    <a class="text-zinc-200" href="">Edit Users</a>
-                    <a class="text-red-500" href="">Delete</a>
-                </div>
-            </div>
 
-            <div class="user w-72 bg-zinc-800 p-5 rounded-lg ">
-                <div class="w-full h-52 rounded-lg bg-zinc-500"></div>
-                <h3 class="text-xl tracking-tighter mt-3 ">Hars Vandana Sharma</h3>
-                <h5 class="text-zinc-500">harsh@gmail.com</h5>
+            <% if(users.length > 0){%>
+
+                  <% users.forEach(function(user){%>
+                  <div class="user w-72 bg-zinc-800 p-5 rounded-lg ">
+                <div class="w-full h-52 rounded-lg bg-zinc-500 overflow-hidden">
+                       <img class="w-full h-full object-cover" src=" <%= user.image %> " alt="">
+                </div>
+                <h3 class="text-xl tracking-tighter mt-3 "> <%= user.name %> </h3>
+                <h5 class="text-zinc-500"> <%= user.email %> </h5>
                 <div class="flex gap-3 mt-10">
-                    <a class="text-zinc-200" href="">Edit Users</a>
-                    <a class="text-red-500" href="">Delete</a>
+                    <a class="text-zinc-200" href="/edit/<%= user.id %>">Edit Users</a>
+                    <a class="text-red-500" href="/delete/<%= user._id %>">Delete</a>
                 </div>
             </div>
+                <%}) %> 
+
+                <% } else { %>
+                    <h1 class="text-5xl mt-40 flex justify-center items-center h-full w-full text-red-700">No Users Yet</h1>
+                <% } %> 
+            
+
+
         </div>
 
     </div>
