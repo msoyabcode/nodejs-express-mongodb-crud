@@ -1,31 +1,35 @@
-# Node.js Express MongoDB CRUD App
+# User Management CRUD App
 
-This is a basic CRUD (Create & Read) application built using:
+A simple **CRUD (Create, Read, Update, Delete)** application built using **Node.js**, **Express**, **EJS**, and **MongoDB**.
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- EJS
-- Tailwind CSS
-
-## Features Implemented
-
-- Create User
-- Read Users
-
-## Features Coming Soon
-
-- Update User
-- Delete User
-
-## How to Run
-
-1. Clone the repository
-2. Run `npm install`
-3. Start server using `nodemon app.js`
-4. Open `http://localhost:3000`
+**Repository:** [https://github.com/msoyabcode/nodejs-express-mongodb-crud](https://github.com/msoyabcode/nodejs-express-mongodb-crud)
 
 ---
 
-This project is part of my backend learning journey.
+## Features
+
+- Create new users (name, email, image URL)  
+- View all users  
+- Update existing user details  
+- Delete users  
+- Responsive and clean UI using **Tailwind CSS**
+
+---
+
+## Tech Stack
+
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- EJS (Templating)  
+- Tailwind CSS
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/msoyabcode/nodejs-express-mongodb-crud.git
+cd nodejs-express-mongodb-crud
